@@ -9,6 +9,7 @@ namespace RomanticFlexibility
     ///
     /// All of these must hold:
     /// - They're an NPC (the player's orientation stays as chosen) and not attracted to no one.
+    /// - The two aren't family: parent, child or sibling, on either side's labels.
     /// - Their fixed openness roll falls under OpenChance.
     /// - The pair is in scope (involves the player's crew, unless IncludeNpcPairs).
     /// - Their own relationship with the other person is close and warm enough, measured on the
@@ -58,6 +59,7 @@ namespace RomanticFlexibility
 
             Relationship r = us.socUs?.GetRelationship(them.strName);
             if (r == null) return "they've never met";
+            if (IsFamily(r) || IsFamily(them.socUs?.GetRelationship(us.strName))) return "family";
             (double fam, double kind) = Closeness(r);
             if (fam < FamiliarityNeeded.Value) return $"familiarity {fam:0.#} of {FamiliarityNeeded.Value:0.#}";
             if (kind < KindnessNeeded.Value) return $"kindness {kind:P0} of {KindnessNeeded.Value:P0}";
@@ -83,6 +85,10 @@ namespace RomanticFlexibility
             h ^= h >> 12;
             return h / 4294967296.0;
         }
+
+        /// <summary>Parent, child or sibling, from either side's labels (RELBioMother, RELBioFather, RELBioChild, RELBioSibling).</summary>
+        private static bool IsFamily(Relationship r) =>
+            r?.aRelationships != null && r.aRelationships.Exists(l => l != null && l.StartsWith("RELBio", StringComparison.Ordinal));
 
         /// <summary>Familiarity and the kind share, the way Relationship.StoreIACond totals them.</summary>
         public static (double familiarity, double kindShare) Closeness(Relationship r)

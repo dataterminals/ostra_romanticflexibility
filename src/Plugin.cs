@@ -10,7 +10,7 @@ namespace RomanticFlexibility
     {
         public const string Guid = "com.sylvia.romanticflexibility";
         public const string Name = "Romantic Flexibility";
-        public const string Version = "0.1.0";
+        public const string Version = "0.1.1";
 
         internal static ManualLogSource Log;
 

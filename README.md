@@ -14,6 +14,7 @@ An NPC may come to feel attraction toward one specific person when all of these 
 
 - They're an NPC. The player's orientation stays as chosen at character creation.
 - They aren't attracted to no one. Ace and aro characters are never touched, and no setting changes that.
+- The two aren't family: parent, child or sibling, going by either side's relationship labels.
 - Their fixed openness falls under `OpenChance`. Openness is a hash of their name, so it survives saves and needs no save data. Raising the chance only adds open characters, and lowering it only removes them.
 - The pair involves the player's crew, unless `IncludeNpcPairs` is on.
 - Their own relationship with that person has reached `FamiliarityNeeded` familiarity, with at least a `KindnessNeeded` kind share.
