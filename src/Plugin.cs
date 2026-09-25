@@ -3,13 +3,13 @@ using BepInEx.Configuration;
 using BepInEx.Logging;
 using HarmonyLib;
 
-namespace SlowBurnRomance
+namespace RomanticFlexibility
 {
     [BepInPlugin(Guid, Name, Version)]
     public class Plugin : BaseUnityPlugin
     {
-        public const string Guid = "com.sylvia.slowburnromance";
-        public const string Name = "Slow Burn Romance";
+        public const string Guid = "com.sylvia.romanticflexibility";
+        public const string Name = "Romantic Flexibility";
         public const string Version = "0.1.0";
 
         internal static ManualLogSource Log;

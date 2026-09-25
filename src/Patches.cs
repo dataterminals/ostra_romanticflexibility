@@ -4,7 +4,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using HarmonyLib;
 
-namespace SlowBurnRomance
+namespace RomanticFlexibility
 {
     /// <summary>
     /// The pair an interaction is being tested for. The game tests an interaction's "us" and

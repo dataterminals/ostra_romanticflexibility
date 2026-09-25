@@ -2,8 +2,8 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <AssemblyName>SlowBurnRomance</AssemblyName>
-    <RootNamespace>SlowBurnRomance</RootNamespace>
+    <AssemblyName>RomanticFlexibility</AssemblyName>
+    <RootNamespace>RomanticFlexibility</RootNamespace>
     <LangVersion>latest</LangVersion>
     <Nullable>disable</Nullable>
     <Version>0.1.0</Version>
@@ -28,9 +28,9 @@
   </ItemGroup>
 
   <Target Name="DeployToGame" AfterTargets="Build" Condition="'$(Deploy)' == 'true'">
-    <MakeDir Directories="$(BepInExDir)\plugins\SlowBurnRomance" />
-    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BepInExDir)\plugins\SlowBurnRomance" />
-    <Message Importance="high" Text="SlowBurnRomance deployed to $(BepInExDir)\plugins\SlowBurnRomance" />
+    <MakeDir Directories="$(BepInExDir)\plugins\RomanticFlexibility" />
+    <Copy SourceFiles="$(TargetPath)" DestinationFolder="$(BepInExDir)\plugins\RomanticFlexibility" />
+    <Message Importance="high" Text="RomanticFlexibility deployed to $(BepInExDir)\plugins\RomanticFlexibility" />
   </Target>
 
 </Project>

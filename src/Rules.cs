@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using BepInEx.Configuration;
 
-namespace SlowBurnRomance
+namespace RomanticFlexibility
 {
     /// <summary>
     /// When one person may feel attraction toward another outside their usual orientation.
@@ -15,8 +15,8 @@ namespace SlowBurnRomance
     ///   game's scale: familiarity and the kind share, computed the way Relationship.StoreIACond
     ///   computes them.
     ///
-    /// It's one-way and per pair: an open NPC who grows close to Rachel may come to feel
-    /// attraction toward her, and toward no one else because of it.
+    /// It's one-way and per pair: an open NPC who grows close to the player may come to feel
+    /// attraction toward them, and toward no one else because of it.
     /// </summary>
     public static class Rules
     {
@@ -27,7 +27,7 @@ namespace SlowBurnRomance
         internal static ConfigEntry<bool> IncludeNpcPairs;
 
         private const double PerStatCap = 25.0;
-        private const string Salt = "SlowBurnRomance:";
+        private const string Salt = "RomanticFlexibility:";
 
         /// <summary>The attraction flag that would cover this person, by the game's gender conditions.</summary>
         public static string FlagFor(CondOwner them)

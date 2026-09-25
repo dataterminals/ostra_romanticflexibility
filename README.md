@@ -1,4 +1,4 @@
-# Slow Burn Romance
+# Romantic Flexibility
 
 A BepInEx plugin for [Ostranauts](https://store.steampowered.com/app/1022980/Ostranauts/). It lets attraction grow between two characters who've become close, even when it falls outside one character's usual orientation. It works one pair at a time and through the game's own relationship numbers.
 
@@ -32,7 +32,7 @@ For such a pair, a trigger that requires the matching attraction flag is evaluat
 
 ## Config
 
-`BepInEx/config/com.sylvia.slowburnromance.cfg`, created on first launch:
+`BepInEx/config/com.sylvia.romanticflexibility.cfg`, created on first launch:
 
 | Setting | Default | |
 | --- | --- | --- |
@@ -48,4 +48,4 @@ For such a pair, a trigger that requires the matching attraction flag is evaluat
 dotnet build -c Release -p:Deploy=true -p:GameDir="<game folder>"
 ```
 
-Requires BepInEx 5 in the game folder. The DLL is deployed to `BepInEx/plugins/SlowBurnRomance/`.
+Requires BepInEx 5 in the game folder. The DLL is deployed to `BepInEx/plugins/RomanticFlexibility/`.
